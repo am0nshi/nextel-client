@@ -10,7 +10,7 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "~6.0@dev"
-    }
+    },
     "autoload": {
         "classmap": [
             "database/factories"
