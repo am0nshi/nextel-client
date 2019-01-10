@@ -12,9 +12,6 @@
         "guzzlehttp/guzzle": "~6.0@dev"
     },
     "autoload": {
-        "classmap": [
-            "database/factories"
-        ],
         "psr-4": {
             "Am0nshi\\Nextel\\": "src/Nextel/"
         }
