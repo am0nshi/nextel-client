@@ -1,0 +1,23 @@
+{
+    "name": "am0nshi/nextel-client",
+    "description": "Nextel API client",
+    "type": "library",
+    "authors": [
+        {
+            "name": "am0nshi",
+            "email": "galaevnik@yandex.ru"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "~6.0@dev"
+    }
+    "autoload": {
+        "classmap": [
+            "database/factories"
+        ],
+        "psr-4": {
+            "Am0nshi\\Nextel\\": "src/Nextel/"
+        }
+    },
+    "minimum-stability": "dev"
+}
