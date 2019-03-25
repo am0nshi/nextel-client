@@ -18,6 +18,7 @@ class Network
     public function __construct($apiKey)
     {
         $this->options['headers']['Authorization'] = $apiKey;
+        $this->options['headers']['Connection'] = 'close';
 
         $this->client = new \GuzzleHttp\Client();
     }

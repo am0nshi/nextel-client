@@ -1,11 +1,11 @@
-##Nextel API client
+## Nextel API client
 
-###Install
+### Install
 ```bash
 composer require am0nshi/nextel-client
 ```
 
-###Usage:
+### Usage:
 ```bash
 $client = new Nextel($apiKey); 
 $voiceRecordId = $client->uploadVoiceRecord($pathOrBinary);
