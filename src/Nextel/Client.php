@@ -22,11 +22,6 @@ class Client
         $file = realpath($pathOrBinary) ? file_get_contents($pathOrBinary) : $pathOrBinary;
 
         $data = [
-            'name' => date('d.m.Y') . '_' . md5(microtime(1) . $file),
-            'type' => 'API',
-            'file' => $file,
-        ];
-        $data = [
             [
                 'name'     => 'name',
                 'contents' => date('d.m.Y') . '_' . md5(microtime(1) . $file)

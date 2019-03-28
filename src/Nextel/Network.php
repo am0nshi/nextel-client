@@ -7,7 +7,8 @@ class Network
 {
     protected $options = [
         'headers' => [
-            'Authorization' => ''
+            'Authorization' => '',
+            'Connection' => 'close',
         ]
     ];
 
@@ -18,9 +19,11 @@ class Network
     public function __construct($apiKey)
     {
         $this->options['headers']['Authorization'] = $apiKey;
-        $this->options['headers']['Connection'] = 'close';
 
-        $this->client = new \GuzzleHttp\Client();
+        $this->client = new \GuzzleHttp\Client([
+            CURLOPT_FORBID_REUSE => true,
+            CURLOPT_FRESH_CONNECT => true,
+        ]);
     }
 
     public function json($uri, $data)
